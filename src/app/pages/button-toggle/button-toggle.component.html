@@ -1,0 +1,44 @@
+<div class="content">
+  <div class="row">
+    <div class="col-6">
+      <h2>Ex. 01 Single Toggle</h2>
+      <mat-button-toggle #toggle01>{{toggle01.checked ? "Active":"Inactive"}}</mat-button-toggle>
+    </div>
+    <div class="col-6">
+      <h2>Ex. 01 Group Toggle</h2>
+      <mat-button-toggle-group #matBtnGrp="matButtonToggleGroup">
+        <mat-button-toggle value="left">
+          <mat-icon class="mat-18">format_align_left</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="right">
+          <mat-icon class="mat-18">format_align_right</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+          <mat-icon class="mat-18">format_align_center</mat-icon>
+        </mat-button-toggle>
+        <mat-button-toggle value="justify">
+          <mat-icon class="mat-18">format_align_justify</mat-icon>
+        </mat-button-toggle>
+      </mat-button-toggle-group>
+      {{matBtnGrp.value}}
+      <p [style.text-align]="matBtnGrp.value" style="max-width: 300px;">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorem laboriosam eum esse veritatis,
+        molestias eos mollitia sed architecto ipsa.
+      </p>
+    </div>
+    <div class="col-6">
+      <h2>Ex. 03 Multiple Toggle Group</h2>
+      <mat-button-toggle-group #matMulBtnGrp="matButtonToggleGroup" multiple>
+        <mat-button-toggle value="Angular">Angular </mat-button-toggle>
+        <mat-button-toggle value="React">React </mat-button-toggle>
+        <mat-button-toggle value="Vue">Vue </mat-button-toggle>
+        <mat-button-toggle value="Java">Java </mat-button-toggle>
+      </mat-button-toggle-group>
+      {{matMulBtnGrp.value}}
+    </div>
+  </div>
+  <!-- {{alertsEnabled}}
+  <mat-button-toggle [aria-label]="alertsEnabled ? 'Disable alerts' : 'Enable alerts'">
+    <mat-icon>notifications</mat-icon>
+  </mat-button-toggle> -->
+</div>
